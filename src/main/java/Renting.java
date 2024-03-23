@@ -1,12 +1,14 @@
+import java.util.Date;
+
 public class Renting {
     private int bookingID;
     private int customerID;
     private int roomID;
     private int payment;
-    private String startDate;
-    private String endDate;
+    private Date startDate;
+    private Date endDate;
 
-    public Renting(int bookingID, int customerID, int roomID, int payment, String start, String end){
+    public Renting(int bookingID, int customerID, int roomID, int payment, Date start, Date end){
         this.bookingID = bookingID;
         this.customerID = customerID;
         this.roomID = roomID;
@@ -26,10 +28,10 @@ public class Renting {
     public int getPayment(){
         return payment;
     }
-    public String getStartDate(){
+    public Date getStartDate(){
         return startDate;
     }
-    public String getEndDate(){
+    public Date getEndDate(){
         return endDate;
     }
     public void setBookingID(int id){
@@ -41,10 +43,10 @@ public class Renting {
     public void setRoomID(int id){
         roomID = id;
     }
-    public void setStartDate(String date){
+    public void setStartDate(Date date){
         startDate = date;
     }
-    public void setEndDate(String date){
+    public void setEndDate(Date date){
         endDate = date;
     }
     public void setPayment(int num){

@@ -1,11 +1,15 @@
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class Booking {
     private int bookingID;
     private int customerID;
     private int roomID;
-    private String startDate;
-    private String endDate;
+    private Date startDate;
+    private Date endDate;
 
-    public Booking(int bookingID, int customerID, int roomID, String start, String end){
+    public Booking(int bookingID, int customerID, int roomID, Date start, Date end){
         this.bookingID = bookingID;
         this.customerID = customerID;
         this.roomID = roomID;
@@ -22,10 +26,12 @@ public class Booking {
         return roomID;
     }
     public String getStartDate(){
-        return startDate;
+        DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+        return df.format(startDate);
     }
     public String getEndDate(){
-        return endDate;
+        DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+        return df.format(endDate);
     }
     public void setBookingID(int id){
         bookingID = id;
@@ -36,10 +42,10 @@ public class Booking {
     public void setRoomID(int id){
         roomID = id;
     }
-    public void setStartDate(String date){
+    public void setStartDate(Date date){
         startDate = date;
     }
-    public void setEndDate(String date){
+    public void setEndDate(Date date){
         endDate = date;
     }
 }

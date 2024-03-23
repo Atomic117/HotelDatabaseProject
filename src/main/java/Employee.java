@@ -6,13 +6,15 @@ public class Employee {
     private String address;
     private String rolePosition;
     private int SSN;
-    public Employee(int employeeID, int hotelID, String fullName, String address, String rolePosition, int SSN){
+    private String password;
+    public Employee(int employeeID, int hotelID, String fullName, String address, String rolePosition, int SSN, String password){
         this.employeeID = employeeID;
         this.hotelID = hotelID;
         this.fullName = fullName;
         this.address = address;
         this.rolePosition = rolePosition;
         this.SSN = SSN;
+        this.password = password;
     }
 
     public int getEmployeeID(){
@@ -33,6 +35,7 @@ public class Employee {
     public int getSSN(){
         return SSN;
     }
+    public String getPassword() { return password; }
     public void setEmployeeID(int ID){
         employeeID = ID;
     }
@@ -51,4 +54,5 @@ public class Employee {
     public void setSSN(int type){
         SSN = type;
     }
+    public void setPassword(String pass) {password = pass; }
 }
