@@ -13,7 +13,7 @@ public class Display_View2 {
         try {
             Connection db = database.getConnection();
             Statement st = db.createStatement();
-            ResultSet rs = st.executeQuery("SELECT * FROM view_1_available_rooms_hotel");
+            ResultSet rs = st.executeQuery("SELECT * FROM view_2_aggregated_capacity_hotel");
             while (rs.next()) {
                 View2 view = new View2(rs.getInt("hotelID"), rs.getInt("total_capacity"));
 
