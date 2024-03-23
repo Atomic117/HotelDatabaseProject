@@ -51,9 +51,9 @@ public class Search {
                     "LEFT JOIN renting ON hotel_room.\"roomID\" = renting.\"roomID\" " +
                     "LEFT JOIN booking ON hotel_room.\"roomID\" = booking.\"roomID\" " +
                     "WHERE ((booking.\"bookingID\" IS NULL AND renting.\"rentingID\" IS NULL " +
-                    "OR NOT (booking.start_date <= DATE " + this.startDate + " AND DATE " + this.endDate + "<= booking.end_date) AND booking.\"bookingID\" IS NOT NULL " +
-                    "OR NOT (renting.start_date <= DATE " + this.startDate + " AND DATE " + this.endDate + " <= renting.end_date) AND renting.\"rentingID\" IS NOT NULL) OR " + this.startDate + " IS NULL OR " + this.endDate + " IS NULL)" +
-                    "AND (capacity = " + this.capacity + " OR " + this.capacity + " IS NULL)" +
+                    "OR NOT (booking.start_date <= DATE '" + this.startDate + "' AND DATE '" + this.endDate + "' <= booking.end_date) AND booking.\"bookingID\" IS NOT NULL " +
+                    "OR NOT (renting.start_date <= DATE '" + this.startDate + "' AND DATE '" + this.endDate + "' <= renting.end_date) AND renting.\"rentingID\" IS NOT NULL) OR " + this.startDate + " IS NULL OR " + this.endDate + " IS NULL)" +
+                    "AND (capacity = '" + this.capacity + "' OR " + this.capacity + " IS NULL)" +
                     "AND (hotel.\"chainID\" = " + Integer.toString(this.chain) + " OR " + Integer.toString(this.chain) + " IS NULL)" +
                     "AND (hotel.\"hotelStar\" = " + Integer.toString(this.category) + " OR " + Integer.toString(this.category) + " IS NULL)" +
                     "AND (room_number >= " + Integer.toString(this.num_of_rooms) + " OR " + Integer.toString(this.num_of_rooms) + " IS NULL)" +
