@@ -1,11 +1,13 @@
+import java.util.Date;
+
 public class Booking {
     private int bookingID;
     private int customerID;
     private int roomID;
-    private String startDate;
-    private String endDate;
+    private Date startDate;
+    private Date endDate;
 
-    public Booking(int bookingID, int customerID, int roomID, String start, String end){
+    public Booking(int bookingID, int customerID, int roomID, Date start, Date end){
         this.bookingID = bookingID;
         this.customerID = customerID;
         this.roomID = roomID;
@@ -21,10 +23,10 @@ public class Booking {
     public int getRoomID(){
         return roomID;
     }
-    public String getStartDate(){
+    public Date getStartDate(){
         return startDate;
     }
-    public String getEndDate(){
+    public Date getEndDate(){
         return endDate;
     }
     public void setBookingID(int id){
@@ -36,10 +38,10 @@ public class Booking {
     public void setRoomID(int id){
         roomID = id;
     }
-    public void setStartDate(String date){
+    public void setStartDate(Date date){
         startDate = date;
     }
-    public void setEndDate(String date){
+    public void setEndDate(Date date){
         endDate = date;
     }
 }
