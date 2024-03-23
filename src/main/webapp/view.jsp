@@ -11,11 +11,10 @@
         <li><a href="index.jsp">Home</a></li>
         <li><a href="login.jsp">Login</a></li>
         <li><a href="view.jsp">Rent</a></li>
-        <li><a href="about.jsp">About</a></li>
     </ul>
 </nav>
 
-<h1> View your Rooms </h1>
+<h1> View1 </h1>
 
 </body>
 </html>

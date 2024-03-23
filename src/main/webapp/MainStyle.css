@@ -1,53 +1,139 @@
+
 body {
-    font-family: Arial;
-    background-color: #cfe8ff;
+    font-family: Arial, sans-serif; /* Set the default font family */
+    background-color: #B0E2FF; /* Set the background color */
+    color: #333; /* Set the default text color */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    line-height: 1.6; /* Set the line height for better readability */
+}
+
+h1 {
+    color: #333333;
+    text-align: center;
 }
 
 .image-container {
-    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px; /* Adjust margin as needed */
 }
-
-.image-container img {
-    display: inline-block;
-    margin: 0 10px;
-}
-
-
-h1 {
-    color: blue;
-    text-align: center;
-}
-
-.paragraph {
-    font-size: 16px
-}
-
 
 nav {
-    background-color: #336699;
-    padding: 10px;
+    background-color: #007bff; /* Background color of the navigation bar */
+    padding: 10px 0; /* Padding at the top and bottom of the navigation bar */
 }
 
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+    list-style-type: none; /* Remove the default bullet points */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    text-align: center; /* Center the list items horizontally */
 }
 
 li {
-    float: left;
+    display: inline; /* Display list items horizontally */
 }
 
 li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
+    display: inline-block; /* Display links as inline-block elements */
+    color: white; /* Text color of the links */
+    text-decoration: none; /* Remove default underline */
+    padding: 10px 20px; /* Padding around the links */
 }
 
 li a:hover {
-    background-color: #ADD8E6;
+    background-color: #00BFFF; /* Background color on hover */
+}
+
+.button-container1 {
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center the items horizontally */
+}
+
+.button1 {
+    background-color: #E0F6FF;
+    display: block;
+    margin: 30px;
+    width: 300px;
+    height: 150px;
+    padding: 15px 30px;
+    border: none;
+    font-size: 40px;
+    font-family: Arial, sans-serif;
+}
+.button1:hover {
+    background-color: #00BFFF; /* Darker cyan color on hover */
+}
+
+p{
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+.login-form {
+    margin: 20px auto; /* Center the form horizontally */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 300px;
+    background-color: #f9f9f9;
+}
+
+.login-form h1 {
+    text-align: center;
+}
+
+.login-form .form-group {
+    margin-bottom: 15px;
+}
+
+.login-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+}
+
+.login-form button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.login-form button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* CSS for the sign-up button */
+.signup-button {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.signup-button button[type="submit"] {
+    width: 300px;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.signup-button button[type="submit"]:hover {
+    background-color: #218838;
 }

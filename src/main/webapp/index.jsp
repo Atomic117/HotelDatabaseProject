@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,8 +13,8 @@
     <ul>
         <li><a href="index.jsp">Home</a></li>
         <li><a href="login.jsp">Login</a></li>
-        <li><a href="view.jsp">Rent</a></li>
-        <li><a href="about.jsp">About</a></li>
+        <li><a href="searchforrooms.jsp">Rent</a></li>
+        <li><a href="about.jsp">About Us</a></li>
     </ul>
 </nav>
 
@@ -23,15 +24,18 @@
     <img src="img/hotelimage_1.jpg" alt="Image 2" width ="500" height = "300">
     <img src="img/hotelimage_2.jpg" alt="Image 3" width ="500" height = "300">
 </div>
-<p> Here is where you book hotel rooms for your vacation. </p>
-<p> Please log in or create a new user account</p>
-<h2>Select your start date:</h2>
-<select name="startdate" id="startdate">
-    <option value="red">Now</option>
-    <option value="red">Today</option>
-    <option value="green">Tomorrow</option>
-    <option value="blue">Future</option>
-    <option value="yellow">Yesterday</option>
-</select>
+
+    <div class="button-container1">
+
+        <form action="login.jsp">
+            <button type="submit" class="button1">Login</button>
+        </form>
+
+        <form action="searchforrooms.jsp">
+            <button type="submit" class="button1">Search for Rooms</button>
+        </form>
+    </div>
+
+<p> Welcome to the Hotel Booking Website! If you want to view rooms, click Search for Rooms. If you would like to rent, please Login </p>
 </body>
 </html>
