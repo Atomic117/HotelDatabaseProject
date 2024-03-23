@@ -39,7 +39,7 @@ public class BookingToRenting {
 
             Booking bookedRoom = new Booking(rs.getInt("bookingID"), rs.getInt("customerID"), rs.getInt("roomID"), rs.getDate("startDate"), rs.getDate("endDate"));
 
-            rs = st.executeQuery("INSERT INTO renting (customerID, roomID, payment, start_date, end_date) VALUES (" + Integer.toString(bookedRoom.getCustomerID()) + ", " + Integer.toString(bookedRoom.getRoomID()) + ", " + Integer.toString(paymentNum) + ", '" + bookedRoom.getStartDate() + "', '" + bookedRoom.getEndDate() + "')");
+            rs = st.executeQuery("INSERT INTO renting (customerID, roomID, payment, start_date, end_date) VALUES (" + Integer.toString(bookedRoom.getCustomerID()) + ", " + Integer.toString(bookedRoom.getRoomID()) + ", " + Integer.toString(paymentNum) + ", DATE '" + bookedRoom.getStartDate() + "', DATE '" + bookedRoom.getEndDate() + "')");
             st.executeQuery("DELETE FROM booking WHERE bookingID=" + Integer.toString(bookingID));
             return "Booking Changed to Renting";
 

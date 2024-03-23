@@ -1,3 +1,5 @@
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Booking {
@@ -23,11 +25,13 @@ public class Booking {
     public int getRoomID(){
         return roomID;
     }
-    public Date getStartDate(){
-        return startDate;
+    public String getStartDate(){
+        DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+        return df.format(startDate);
     }
-    public Date getEndDate(){
-        return endDate;
+    public String getEndDate(){
+        DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+        return df.format(endDate);
     }
     public void setBookingID(int id){
         bookingID = id;
