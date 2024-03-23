@@ -46,7 +46,7 @@ public class Search {
         try {
             Connection db = database.getConnection();
             Statement st = db.createStatement();
-            ResultSet rs = st.executeQuery("SELECT * FROM hotel_room " +
+            ResultSet rs = st.executeQuery("SELECT hotel_room.\"roomID\", hotel_room.\"hotelID\", price, extension, damages, capacity, hotel_room.\"sea_mountainView\" FROM hotel_room " +
                     "LEFT JOIN hotel ON hotel_room.\"hotelID\" = hotel.\"hotelID\" " +
                     "LEFT JOIN renting ON hotel_room.\"roomID\" = renting.\"roomID\" " +
                     "LEFT JOIN booking ON hotel_room.\"roomID\" = booking.\"roomID\" " +
