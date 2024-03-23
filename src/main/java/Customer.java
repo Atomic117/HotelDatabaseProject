@@ -4,13 +4,15 @@ public class Customer {
     private String address;
     private String registrationDate;
     private int typeID;
+    private String password;
 
-    public Customer(int customerID, String fullName, String address, String registrationDate, int typeID){
+    public Customer(int customerID, String fullName, String address, String registrationDate, int typeID, String password){
         this.customerID = customerID;
         this.fullName = fullName;
         this.address = address;
         this.registrationDate = registrationDate;
         this.typeID = typeID;
+        this.password = password;
     }
 
     public int getCustomerID(){
@@ -33,6 +35,7 @@ public class Customer {
         return typeID;
     }
 
+    public String getPassword() { return password; }
     public void setCustomerID(int id){
         customerID = id;
     }
@@ -52,4 +55,6 @@ public class Customer {
     public void setTypeID(int id){
         typeID = id;
     }
+
+    public void setPassword(String pass) { password = pass; }
 }
