@@ -1,14 +1,14 @@
 public class Hotel {
     private int hotelID;
     private int chainID;
-    private int manager;
+    private String manager;
     private int room_number;
     private String hotelAddress;
     private int hotelStar;
     private String email;
     private String phone;
 
-    public Hotel(int hotelID, int chainID, int manager, int room_number, String address, int star, String email, String phone){
+    public Hotel(int hotelID, int chainID, String manager, int room_number, String address, int star, String email, String phone){
         this.hotelID = hotelID;
         this.chainID = chainID;
         this.manager = manager;
@@ -25,7 +25,7 @@ public class Hotel {
     public int getChainID(){
         return chainID;
     }
-    public int getManagerNum(){
+    public String getManagerNum(){
         return manager;
     }
     public int getRoomNumber(){
@@ -49,8 +49,8 @@ public class Hotel {
     public void setChainIDI(int id){
         chainID = id;
     }
-    public void setManagerNum(int num){
-        manager = num;
+    public void setManagerNum(String name){
+        manager = name;
     }
     public void setRoomNum(int num){
         room_number = num;
