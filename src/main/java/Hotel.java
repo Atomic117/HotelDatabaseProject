@@ -1,0 +1,70 @@
+public class Hotel {
+    private int hotelID;
+    private int chainID;
+    private int manager;
+    private int room_number;
+    private String hotelAddress;
+    private int hotelStar;
+    private String email;
+    private String phone;
+
+    public Hotel(int hotelID, int chainID, int manager, int room_number, String address, int star, String email, String phone){
+        this.hotelID = hotelID;
+        this.chainID = chainID;
+        this.manager = manager;
+        this.room_number = room_number;
+        hotelAddress = address;
+        hotelStar = star;
+        this.email = email;
+        this.phone = phone;
+    }
+
+    public int getHotelID(){
+        return hotelID;
+    }
+    public int getChainID(){
+        return chainID;
+    }
+    public int getManagerNum(){
+        return manager;
+    }
+    public int getRoomNumber(){
+        return room_number;
+    }
+    public String getAddress(){
+        return hotelAddress;
+    }
+    public int getStar(){
+        return hotelStar;
+    }
+    public String getEmail(){
+        return email;
+    }
+    public String getPhone(){
+        return phone;
+    }
+    public void setHotelID(int id){
+        hotelID = id;
+    }
+    public void setChainIDI(int id){
+        chainID = id;
+    }
+    public void setManagerNum(int num){
+        manager = num;
+    }
+    public void setRoomNum(int num){
+        room_number = num;
+    }
+    public void setAddress(String address){
+        hotelAddress = address;
+    }
+    public void setStar(int star){
+        hotelStar = star;
+    }
+    public void setEmail(String email){
+        this.email = email;
+    }
+    public void setPhone(String phone){
+        this.phone = phone;
+    }
+}
