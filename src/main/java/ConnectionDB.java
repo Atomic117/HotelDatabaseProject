@@ -4,11 +4,11 @@ import java.sql.SQLException;
 
 public class ConnectionDB {
 
-    private final String ip = "127.0.0.1";
-    private final String dbServerPort = "5432";
-    private final String dbName = "postgres";
+    private final String ip = "localhost";
+    private final String dbServerPort = "5000";
+    private final String dbName = "Hotel";
     private final String dbusername = "postgres";
-    private final String dbpassword = "";
+    private final String dbpassword = "8314J1mi14";
 
     private Connection con = null;
 
