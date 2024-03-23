@@ -2,10 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>HotelBooking</title>
-    <link rel="stylesheet" href="MainPageStyle.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="MainStyle.css">
 </head>
 <body>
+
+<nav>
+    <ul>
+        <li><a href="index.jsp">Home</a></li>
+        <li><a href="login.jsp">Login</a></li>
+        <li><a href="view.jsp">Rent</a></li>
+        <li><a href="about.jsp">About</a></li>
+    </ul>
+</nav>
+
 <h1> Hotel Booking Website</h1>
 <div class="image-container">
     <img src="img/hotelimage_0.jpg" alt="Image 1" width ="500" height = "300">
