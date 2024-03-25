@@ -286,3 +286,7 @@
 25-Mar-2024 17:38:44.066 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\thoma\OneDrive\Documents\GitHub\HotelDatabaseProject\conf\Catalina\localhost\WebProject.xml] has finished in [692] ms
 25-Mar-2024 17:38:44.069 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8050"]
 25-Mar-2024 17:38:44.091 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [788] milliseconds
+25-Mar-2024 19:35:52.901 INFO [Thread-1] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8050"]
+25-Mar-2024 19:35:52.911 INFO [Thread-1] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+25-Mar-2024 19:35:52.954 INFO [Thread-1] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8050"]
+25-Mar-2024 19:35:52.970 INFO [Thread-1] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8050"]
