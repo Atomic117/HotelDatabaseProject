@@ -1,0 +1,288 @@
+25-Mar-2024 17:35:55.580 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.1.19
+25-Mar-2024 17:35:55.585 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Feb 14 2024 19:36:50 UTC
+25-Mar-2024 17:35:55.585 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.1.19.0
+25-Mar-2024 17:35:55.585 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 11
+25-Mar-2024 17:35:55.585 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+25-Mar-2024 17:35:55.585 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+25-Mar-2024 17:35:55.585 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk-21
+25-Mar-2024 17:35:55.585 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           21.0.2+13-LTS-58
+25-Mar-2024 17:35:55.585 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+25-Mar-2024 17:35:55.585 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\Users\thoma\OneDrive\Documents\GitHub\HotelDatabaseProject
+25-Mar-2024 17:35:55.585 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\Program Files\Apache Software Foundation\Tomcat 10.1_Tomcat10.0
+25-Mar-2024 17:35:55.595 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+25-Mar-2024 17:35:55.595 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+25-Mar-2024 17:35:55.595 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+25-Mar-2024 17:35:55.596 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+25-Mar-2024 17:35:55.596 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+25-Mar-2024 17:35:55.596 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\Program Files\Apache Software Foundation\Tomcat 10.1_Tomcat10.0
+25-Mar-2024 17:35:55.596 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\Users\thoma\OneDrive\Documents\GitHub\HotelDatabaseProject
+25-Mar-2024 17:35:55.596 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\Users\thoma\OneDrive\Documents\GitHub\HotelDatabaseProject\temp
+25-Mar-2024 17:35:55.596 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\Users\thoma\OneDrive\Documents\GitHub\HotelDatabaseProject\conf\logging.properties
+25-Mar-2024 17:35:55.596 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+25-Mar-2024 17:35:55.597 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.3.6\lib\idea_rt.jar=59766:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.3.6\bin
+25-Mar-2024 17:35:55.597 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dfile.encoding=UTF-8
+25-Mar-2024 17:35:55.597 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.stdout.encoding=UTF-8
+25-Mar-2024 17:35:55.597 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.stderr.encoding=UTF-8
+25-Mar-2024 17:35:55.601 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [C:\Program Files\Java\jdk-21\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\Apache Software Foundation\apache-maven-3.9.6\bin;C:\Users\thoma\AppData\Local\Microsoft\WindowsApps;C:\altera\13.0sp1\modelsim_ase\win32aloem;C:\Users\thoma\AppData\Local\GitHubDesktop\bin;C:\Users\thoma\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.3.6\bin;;.]
+25-Mar-2024 17:35:55.951 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+25-Mar-2024 17:35:55.962 SEVERE [main] org.apache.catalina.util.LifecycleBase.handleSubClassException Failed to initialize component [Connector["http-nio-8080"]]
+	org.apache.catalina.LifecycleException: Protocol handler initialization failed
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:1015)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:127)
+		at org.apache.catalina.core.StandardService.initInternal(StandardService.java:554)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:127)
+		at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:1017)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:127)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:708)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:731)
+		at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+		at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:302)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:475)
+	Caused by: java.net.BindException: Address already in use: bind
+		at java.base/sun.nio.ch.Net.bind0(Native Method)
+		at java.base/sun.nio.ch.Net.bind(Net.java:565)
+		at java.base/sun.nio.ch.ServerSocketChannelImpl.netBind(ServerSocketChannelImpl.java:344)
+		at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:301)
+		at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:247)
+		at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:202)
+		at org.apache.tomcat.util.net.AbstractEndpoint.bindWithCleanup(AbstractEndpoint.java:1282)
+		at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1295)
+		at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:624)
+		at org.apache.coyote.http11.AbstractHttp11Protocol.init(AbstractHttp11Protocol.java:77)
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:1013)
+		... 11 more
+25-Mar-2024 17:35:55.964 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [567] milliseconds
+25-Mar-2024 17:35:56.025 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+25-Mar-2024 17:35:56.026 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.19]
+25-Mar-2024 17:35:56.070 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\Users\thoma\OneDrive\Documents\GitHub\HotelDatabaseProject\conf\Catalina\localhost\WebProject.xml]
+25-Mar-2024 17:35:56.688 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+25-Mar-2024 17:35:56.734 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\thoma\OneDrive\Documents\GitHub\HotelDatabaseProject\conf\Catalina\localhost\WebProject.xml] has finished in [663] ms
+25-Mar-2024 17:35:56.739 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [774] milliseconds
+25-Mar-2024 17:35:56.746 SEVERE [main] org.apache.catalina.core.StandardServer.await Failed to create server shutdown socket on address [localhost] and port [8005] (base port [8005] and offset [0])
+	java.net.BindException: Address already in use: bind
+		at java.base/sun.nio.ch.Net.bind0(Native Method)
+		at java.base/sun.nio.ch.Net.bind(Net.java:565)
+		at java.base/sun.nio.ch.Net.bind(Net.java:554)
+		at java.base/sun.nio.ch.NioSocketImpl.bind(NioSocketImpl.java:636)
+		at java.base/java.net.ServerSocket.bind(ServerSocket.java:391)
+		at java.base/java.net.ServerSocket.<init>(ServerSocket.java:278)
+		at org.apache.catalina.core.StandardServer.await(StandardServer.java:577)
+		at org.apache.catalina.startup.Catalina.await(Catalina.java:847)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:795)
+		at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:476)
+25-Mar-2024 17:35:56.746 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+25-Mar-2024 17:35:56.746 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+25-Mar-2024 17:35:56.756 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+25-Mar-2024 17:35:56.756 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+25-Mar-2024 17:36:18.367 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.1.19
+25-Mar-2024 17:36:18.372 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Feb 14 2024 19:36:50 UTC
+25-Mar-2024 17:36:18.372 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.1.19.0
+25-Mar-2024 17:36:18.373 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 11
+25-Mar-2024 17:36:18.373 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+25-Mar-2024 17:36:18.373 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+25-Mar-2024 17:36:18.373 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk-21
+25-Mar-2024 17:36:18.373 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           21.0.2+13-LTS-58
+25-Mar-2024 17:36:18.373 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+25-Mar-2024 17:36:18.373 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\Users\thoma\OneDrive\Documents\GitHub\HotelDatabaseProject
+25-Mar-2024 17:36:18.373 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\Program Files\Apache Software Foundation\Tomcat 10.1_Tomcat10.0
+25-Mar-2024 17:36:18.385 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+25-Mar-2024 17:36:18.386 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+25-Mar-2024 17:36:18.386 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+25-Mar-2024 17:36:18.386 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+25-Mar-2024 17:36:18.386 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+25-Mar-2024 17:36:18.386 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\Program Files\Apache Software Foundation\Tomcat 10.1_Tomcat10.0
+25-Mar-2024 17:36:18.386 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\Users\thoma\OneDrive\Documents\GitHub\HotelDatabaseProject
+25-Mar-2024 17:36:18.387 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\Users\thoma\OneDrive\Documents\GitHub\HotelDatabaseProject\temp
+25-Mar-2024 17:36:18.387 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\Users\thoma\OneDrive\Documents\GitHub\HotelDatabaseProject\conf\logging.properties
+25-Mar-2024 17:36:18.387 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+25-Mar-2024 17:36:18.387 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.3.6\lib\idea_rt.jar=59778:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.3.6\bin
+25-Mar-2024 17:36:18.387 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dfile.encoding=UTF-8
+25-Mar-2024 17:36:18.387 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.stdout.encoding=UTF-8
+25-Mar-2024 17:36:18.387 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.stderr.encoding=UTF-8
+25-Mar-2024 17:36:18.394 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [C:\Program Files\Java\jdk-21\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\Apache Software Foundation\apache-maven-3.9.6\bin;C:\Users\thoma\AppData\Local\Microsoft\WindowsApps;C:\altera\13.0sp1\modelsim_ase\win32aloem;C:\Users\thoma\AppData\Local\GitHubDesktop\bin;C:\Users\thoma\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.3.6\bin;;.]
+25-Mar-2024 17:36:18.755 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+25-Mar-2024 17:36:18.768 SEVERE [main] org.apache.catalina.util.LifecycleBase.handleSubClassException Failed to initialize component [Connector["http-nio-8080"]]
+	org.apache.catalina.LifecycleException: Protocol handler initialization failed
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:1015)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:127)
+		at org.apache.catalina.core.StandardService.initInternal(StandardService.java:554)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:127)
+		at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:1017)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:127)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:708)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:731)
+		at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+		at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:302)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:475)
+	Caused by: java.net.BindException: Address already in use: bind
+		at java.base/sun.nio.ch.Net.bind0(Native Method)
+		at java.base/sun.nio.ch.Net.bind(Net.java:565)
+		at java.base/sun.nio.ch.ServerSocketChannelImpl.netBind(ServerSocketChannelImpl.java:344)
+		at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:301)
+		at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:247)
+		at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:202)
+		at org.apache.tomcat.util.net.AbstractEndpoint.bindWithCleanup(AbstractEndpoint.java:1282)
+		at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1295)
+		at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:624)
+		at org.apache.coyote.http11.AbstractHttp11Protocol.init(AbstractHttp11Protocol.java:77)
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:1013)
+		... 11 more
+25-Mar-2024 17:36:18.770 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [601] milliseconds
+25-Mar-2024 17:36:18.834 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+25-Mar-2024 17:36:18.834 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.19]
+25-Mar-2024 17:36:18.850 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\Users\thoma\OneDrive\Documents\GitHub\HotelDatabaseProject\conf\Catalina\localhost\WebProject.xml]
+25-Mar-2024 17:36:19.526 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+25-Mar-2024 17:36:19.572 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\thoma\OneDrive\Documents\GitHub\HotelDatabaseProject\conf\Catalina\localhost\WebProject.xml] has finished in [723] ms
+25-Mar-2024 17:36:19.577 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [806] milliseconds
+25-Mar-2024 17:36:19.586 SEVERE [main] org.apache.catalina.core.StandardServer.await Failed to create server shutdown socket on address [localhost] and port [8005] (base port [8005] and offset [0])
+	java.net.BindException: Address already in use: bind
+		at java.base/sun.nio.ch.Net.bind0(Native Method)
+		at java.base/sun.nio.ch.Net.bind(Net.java:565)
+		at java.base/sun.nio.ch.Net.bind(Net.java:554)
+		at java.base/sun.nio.ch.NioSocketImpl.bind(NioSocketImpl.java:636)
+		at java.base/java.net.ServerSocket.bind(ServerSocket.java:391)
+		at java.base/java.net.ServerSocket.<init>(ServerSocket.java:278)
+		at org.apache.catalina.core.StandardServer.await(StandardServer.java:577)
+		at org.apache.catalina.startup.Catalina.await(Catalina.java:847)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:795)
+		at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:476)
+25-Mar-2024 17:36:19.586 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+25-Mar-2024 17:36:19.586 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+25-Mar-2024 17:36:19.598 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+25-Mar-2024 17:36:19.599 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+25-Mar-2024 17:37:54.996 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.1.19
+25-Mar-2024 17:37:55.001 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Feb 14 2024 19:36:50 UTC
+25-Mar-2024 17:37:55.001 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.1.19.0
+25-Mar-2024 17:37:55.001 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 11
+25-Mar-2024 17:37:55.002 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+25-Mar-2024 17:37:55.002 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+25-Mar-2024 17:37:55.002 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk-21
+25-Mar-2024 17:37:55.002 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           21.0.2+13-LTS-58
+25-Mar-2024 17:37:55.003 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+25-Mar-2024 17:37:55.003 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\Users\thoma\OneDrive\Documents\GitHub\HotelDatabaseProject
+25-Mar-2024 17:37:55.003 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\Program Files\Apache Software Foundation\Tomcat 10.1_Tomcat10.0
+25-Mar-2024 17:37:55.014 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+25-Mar-2024 17:37:55.014 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+25-Mar-2024 17:37:55.014 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+25-Mar-2024 17:37:55.014 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+25-Mar-2024 17:37:55.014 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+25-Mar-2024 17:37:55.014 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\Program Files\Apache Software Foundation\Tomcat 10.1_Tomcat10.0
+25-Mar-2024 17:37:55.015 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\Users\thoma\OneDrive\Documents\GitHub\HotelDatabaseProject
+25-Mar-2024 17:37:55.015 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\Users\thoma\OneDrive\Documents\GitHub\HotelDatabaseProject\temp
+25-Mar-2024 17:37:55.015 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\Users\thoma\OneDrive\Documents\GitHub\HotelDatabaseProject\conf\logging.properties
+25-Mar-2024 17:37:55.015 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+25-Mar-2024 17:37:55.015 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.3.6\lib\idea_rt.jar=59797:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.3.6\bin
+25-Mar-2024 17:37:55.015 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dfile.encoding=UTF-8
+25-Mar-2024 17:37:55.015 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.stdout.encoding=UTF-8
+25-Mar-2024 17:37:55.016 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.stderr.encoding=UTF-8
+25-Mar-2024 17:37:55.020 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [C:\Program Files\Java\jdk-21\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\Apache Software Foundation\apache-maven-3.9.6\bin;C:\Users\thoma\AppData\Local\Microsoft\WindowsApps;C:\altera\13.0sp1\modelsim_ase\win32aloem;C:\Users\thoma\AppData\Local\GitHubDesktop\bin;C:\Users\thoma\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.3.6\bin;;.]
+25-Mar-2024 17:37:55.352 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8050"]
+25-Mar-2024 17:37:55.401 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [582] milliseconds
+25-Mar-2024 17:37:55.459 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+25-Mar-2024 17:37:55.459 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.19]
+25-Mar-2024 17:37:55.472 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\Users\thoma\OneDrive\Documents\GitHub\HotelDatabaseProject\conf\Catalina\localhost\WebProject.xml]
+25-Mar-2024 17:37:56.165 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+25-Mar-2024 17:37:56.208 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\thoma\OneDrive\Documents\GitHub\HotelDatabaseProject\conf\Catalina\localhost\WebProject.xml] has finished in [735] ms
+25-Mar-2024 17:37:56.212 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8050"]
+25-Mar-2024 17:37:56.236 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [833] milliseconds
+25-Mar-2024 17:37:56.242 SEVERE [main] org.apache.catalina.core.StandardServer.await Failed to create server shutdown socket on address [localhost] and port [8005] (base port [8005] and offset [0])
+	java.net.BindException: Address already in use: bind
+		at java.base/sun.nio.ch.Net.bind0(Native Method)
+		at java.base/sun.nio.ch.Net.bind(Net.java:565)
+		at java.base/sun.nio.ch.Net.bind(Net.java:554)
+		at java.base/sun.nio.ch.NioSocketImpl.bind(NioSocketImpl.java:636)
+		at java.base/java.net.ServerSocket.bind(ServerSocket.java:391)
+		at java.base/java.net.ServerSocket.<init>(ServerSocket.java:278)
+		at org.apache.catalina.core.StandardServer.await(StandardServer.java:577)
+		at org.apache.catalina.startup.Catalina.await(Catalina.java:847)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:795)
+		at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:476)
+25-Mar-2024 17:37:56.243 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8050"]
+25-Mar-2024 17:37:56.245 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+25-Mar-2024 17:37:56.253 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8050"]
+25-Mar-2024 17:37:56.255 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8050"]
+25-Mar-2024 17:38:14.713 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.1.19
+25-Mar-2024 17:38:14.717 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Feb 14 2024 19:36:50 UTC
+25-Mar-2024 17:38:14.718 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.1.19.0
+25-Mar-2024 17:38:14.718 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 11
+25-Mar-2024 17:38:14.718 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+25-Mar-2024 17:38:14.718 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+25-Mar-2024 17:38:14.718 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk-21
+25-Mar-2024 17:38:14.718 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           21.0.2+13-LTS-58
+25-Mar-2024 17:38:14.718 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+25-Mar-2024 17:38:14.719 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\Users\thoma\OneDrive\Documents\GitHub\HotelDatabaseProject
+25-Mar-2024 17:38:14.719 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\Program Files\Apache Software Foundation\Tomcat 10.1_Tomcat10.0
+25-Mar-2024 17:38:14.730 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+25-Mar-2024 17:38:14.730 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+25-Mar-2024 17:38:14.730 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+25-Mar-2024 17:38:14.731 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+25-Mar-2024 17:38:14.731 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+25-Mar-2024 17:38:14.731 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\Program Files\Apache Software Foundation\Tomcat 10.1_Tomcat10.0
+25-Mar-2024 17:38:14.731 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\Users\thoma\OneDrive\Documents\GitHub\HotelDatabaseProject
+25-Mar-2024 17:38:14.731 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\Users\thoma\OneDrive\Documents\GitHub\HotelDatabaseProject\temp
+25-Mar-2024 17:38:14.731 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\Users\thoma\OneDrive\Documents\GitHub\HotelDatabaseProject\conf\logging.properties
+25-Mar-2024 17:38:14.732 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+25-Mar-2024 17:38:14.732 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.3.6\lib\idea_rt.jar=59819:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.3.6\bin
+25-Mar-2024 17:38:14.732 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dfile.encoding=UTF-8
+25-Mar-2024 17:38:14.732 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.stdout.encoding=UTF-8
+25-Mar-2024 17:38:14.732 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.stderr.encoding=UTF-8
+25-Mar-2024 17:38:14.736 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [C:\Program Files\Java\jdk-21\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\Apache Software Foundation\apache-maven-3.9.6\bin;C:\Users\thoma\AppData\Local\Microsoft\WindowsApps;C:\altera\13.0sp1\modelsim_ase\win32aloem;C:\Users\thoma\AppData\Local\GitHubDesktop\bin;C:\Users\thoma\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.3.6\bin;;.]
+25-Mar-2024 17:38:15.096 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8050"]
+25-Mar-2024 17:38:15.121 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [580] milliseconds
+25-Mar-2024 17:38:15.193 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+25-Mar-2024 17:38:15.193 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.19]
+25-Mar-2024 17:38:15.221 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\Users\thoma\OneDrive\Documents\GitHub\HotelDatabaseProject\conf\Catalina\localhost\WebProject.xml]
+25-Mar-2024 17:38:15.940 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+25-Mar-2024 17:38:15.985 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\thoma\OneDrive\Documents\GitHub\HotelDatabaseProject\conf\Catalina\localhost\WebProject.xml] has finished in [763] ms
+25-Mar-2024 17:38:15.989 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8050"]
+25-Mar-2024 17:38:16.013 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [890] milliseconds
+25-Mar-2024 17:38:41.718 INFO [Thread-1] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8050"]
+25-Mar-2024 17:38:41.720 INFO [Thread-1] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+25-Mar-2024 17:38:41.730 INFO [Thread-1] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8050"]
+25-Mar-2024 17:38:41.748 INFO [Thread-1] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8050"]
+25-Mar-2024 17:38:42.936 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.1.19
+25-Mar-2024 17:38:42.941 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Feb 14 2024 19:36:50 UTC
+25-Mar-2024 17:38:42.941 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.1.19.0
+25-Mar-2024 17:38:42.941 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 11
+25-Mar-2024 17:38:42.941 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+25-Mar-2024 17:38:42.941 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+25-Mar-2024 17:38:42.941 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk-21
+25-Mar-2024 17:38:42.942 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           21.0.2+13-LTS-58
+25-Mar-2024 17:38:42.942 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+25-Mar-2024 17:38:42.942 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\Users\thoma\OneDrive\Documents\GitHub\HotelDatabaseProject
+25-Mar-2024 17:38:42.942 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\Program Files\Apache Software Foundation\Tomcat 10.1_Tomcat10.0
+25-Mar-2024 17:38:42.953 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+25-Mar-2024 17:38:42.953 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+25-Mar-2024 17:38:42.953 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+25-Mar-2024 17:38:42.953 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+25-Mar-2024 17:38:42.954 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+25-Mar-2024 17:38:42.954 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\Program Files\Apache Software Foundation\Tomcat 10.1_Tomcat10.0
+25-Mar-2024 17:38:42.954 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\Users\thoma\OneDrive\Documents\GitHub\HotelDatabaseProject
+25-Mar-2024 17:38:42.954 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\Users\thoma\OneDrive\Documents\GitHub\HotelDatabaseProject\temp
+25-Mar-2024 17:38:42.954 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\Users\thoma\OneDrive\Documents\GitHub\HotelDatabaseProject\conf\logging.properties
+25-Mar-2024 17:38:42.954 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+25-Mar-2024 17:38:42.954 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.3.6\lib\idea_rt.jar=59834:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.3.6\bin
+25-Mar-2024 17:38:42.954 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dfile.encoding=UTF-8
+25-Mar-2024 17:38:42.954 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.stdout.encoding=UTF-8
+25-Mar-2024 17:38:42.954 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.stderr.encoding=UTF-8
+25-Mar-2024 17:38:42.960 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [C:\Program Files\Java\jdk-21\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\Apache Software Foundation\apache-maven-3.9.6\bin;C:\Users\thoma\AppData\Local\Microsoft\WindowsApps;C:\altera\13.0sp1\modelsim_ase\win32aloem;C:\Users\thoma\AppData\Local\GitHubDesktop\bin;C:\Users\thoma\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.3.6\bin;;.]
+25-Mar-2024 17:38:43.283 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8050"]
+25-Mar-2024 17:38:43.302 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [539] milliseconds
+25-Mar-2024 17:38:43.360 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+25-Mar-2024 17:38:43.360 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.19]
+25-Mar-2024 17:38:43.373 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\Users\thoma\OneDrive\Documents\GitHub\HotelDatabaseProject\conf\Catalina\localhost\WebProject.xml]
+25-Mar-2024 17:38:44.024 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+25-Mar-2024 17:38:44.066 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\thoma\OneDrive\Documents\GitHub\HotelDatabaseProject\conf\Catalina\localhost\WebProject.xml] has finished in [692] ms
+25-Mar-2024 17:38:44.069 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8050"]
+25-Mar-2024 17:38:44.091 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [788] milliseconds

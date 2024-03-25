@@ -1,5 +1,10 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="java.util.*" %>
+<&@ page import="javax.servlet.http.HttpServletRequest" &>
+<&@ page import="javax.servlet.http.HttpSession" &>
+<&@ page import="UserSession" &>
+<&@ page import="SignIn" &>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,12 +38,16 @@
         String address = request.getParameter("address");
         String id = request.getParameter("typeID");
 
+
+
         //READ FROM DATABASE
         String validUsername = "user";
 
         boolean isOkay = !validUsername.equals(username);
 
         if (isOkay) {
+            SignIn signIn = new SignIn();
+            signIn.signUpCustomer(username, password, Integer.parseInt(id), address)
             response.sendRedirect("customer.jsp");
         } else {
             response.sendRedirect("signupcustomer.jsp?error=invalidCredentials");
