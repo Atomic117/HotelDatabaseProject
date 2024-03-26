@@ -1,9 +1,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="java.util.*" %>
-<&@ page import="javax.servlet.http.HttpServletRequest" &>
-<&@ page import="javax.servlet.http.HttpSession" &>
-<&@ page import="UserSession" &>
-<&@ page import="SignIn" &>
+<%@ page import="javax.servlet.http.HttpServletRequest" %>
+<%@ page import="javax.servlet.http.HttpSession" %>
+<%@ page import="UserSession" %>
+<%@ page import="SignIn" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -16,6 +16,8 @@
             var error = urlParams.get('error');
             if (error === 'invalidCredentials') {
                 alert("Error: Username taken already");
+            } else (error === 'unknown'){
+                alert("Error: Database")
             }
         </script>
 </head>
@@ -38,18 +40,25 @@
         String address = request.getParameter("address");
         String id = request.getParameter("typeID");
 
+        // READ FROM DATABASE (This part is missing)
 
-
-        //READ FROM DATABASE
         String validUsername = "user";
 
         boolean isOkay = !validUsername.equals(username);
 
         if (isOkay) {
-            SignIn signIn = new SignIn();
-            signIn.signUpCustomer(username, password, Integer.parseInt(id), address)
-            response.sendRedirect("customer.jsp");
+            try {
+                // Create session and redirect if username is okay
+                SignIn signIn = new SignIn();
+                signIn.signUpCustomer(username, password, Integer.parseInt(id), address);
+                UserSession.createSession(request, username, password, "customer");
+                response.sendRedirect("customer.jsp");
+            } catch (Exception e) {
+                // Handle exception, e.g., database error
+                response.sendRedirect("signupcustomer.jsp?error=unknownError");
+            }
         } else {
+            // Redirect with error if username is not okay
             response.sendRedirect("signupcustomer.jsp?error=invalidCredentials");
         }
     }

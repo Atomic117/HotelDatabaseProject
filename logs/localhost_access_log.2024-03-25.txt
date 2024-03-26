@@ -12,3 +12,16 @@
 0:0:0:0:0:0:0:1 - - [25/Mar/2024:17:38:49 -0400] "GET /WebProject/searchforrooms.jsp? HTTP/1.1" 200 435
 0:0:0:0:0:0:0:1 - - [25/Mar/2024:17:38:50 -0400] "GET /WebProject/index.jsp HTTP/1.1" 200 1268
 0:0:0:0:0:0:0:1 - - [25/Mar/2024:17:38:52 -0400] "GET /WebProject/login.jsp? HTTP/1.1" 200 1234
+0:0:0:0:0:0:0:1 - - [25/Mar/2024:19:44:02 -0400] "GET /WebProject HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [25/Mar/2024:19:44:03 -0400] "GET /WebProject/ HTTP/1.1" 200 1268
+0:0:0:0:0:0:0:1 - - [25/Mar/2024:19:44:03 -0400] "GET /WebProject/img/hotelimage_0.jpg HTTP/1.1" 200 101416
+0:0:0:0:0:0:0:1 - - [25/Mar/2024:19:44:03 -0400] "GET /WebProject/img/hotelimage_1.jpg HTTP/1.1" 200 62519
+0:0:0:0:0:0:0:1 - - [25/Mar/2024:19:44:03 -0400] "GET /WebProject/img/hotelimage_2.jpg HTTP/1.1" 200 71923
+0:0:0:0:0:0:0:1 - - [25/Mar/2024:19:44:03 -0400] "GET /WebProject/MainStyle.css HTTP/1.1" 200 3224
+0:0:0:0:0:0:0:1 - - [25/Mar/2024:19:44:03 -0400] "GET /favicon.ico HTTP/1.1" 404 683
+0:0:0:0:0:0:0:1 - - [25/Mar/2024:19:44:05 -0400] "GET /WebProject/login.jsp HTTP/1.1" 200 1234
+0:0:0:0:0:0:0:1 - - [25/Mar/2024:19:44:06 -0400] "GET /WebProject/index.jsp HTTP/1.1" 200 1268
+0:0:0:0:0:0:0:1 - - [25/Mar/2024:19:44:07 -0400] "GET /WebProject/searchforrooms.jsp HTTP/1.1" 200 435
+0:0:0:0:0:0:0:1 - - [25/Mar/2024:19:44:08 -0400] "GET /WebProject/index.jsp HTTP/1.1" 200 1268
+0:0:0:0:0:0:0:1 - - [25/Mar/2024:19:48:28 -0400] "GET /WebProject HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [25/Mar/2024:19:48:29 -0400] "GET /WebProject/ HTTP/1.1" 200 1268
