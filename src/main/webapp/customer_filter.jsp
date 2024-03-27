@@ -58,10 +58,15 @@
 
     <label for="numberroomsbox" class="labelbox">Minimum Number of Rooms:</label>
     <select id="numberroomsbox" name="numberroomsbox">
-      <option value="1000">Any</option>
+      <option value="0">Any</option>
+      <option value="2">2 rooms</option>
+      <option value="4">4 rooms</option>
+      <option value="6">6 rooms</option>
+      <option value="8">8 rooms</option>
       <option value="10">10 rooms</option>
-      <option value="15">15 rooms</option>
-      <option value="20">20 rooms</option>
+      <option value="12">12 rooms</option>
+      <option value="14">14 rooms</option>
+      <option value="16">16 rooms</option>
     </select><br>
 
     <label for="pricebox" class="labelbox">Max Price:</label>

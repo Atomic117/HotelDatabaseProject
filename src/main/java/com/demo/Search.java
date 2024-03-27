@@ -4,62 +4,84 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.*;
+import java.sql.PreparedStatement;
 
 public class Search {
 
-    String startDate;
+        public ArrayList<Room> search(int chainId, Date bookingDate, Date startDate, int hotelStar, String capacity, double price, int totalRooms) {
 
-    String endDate;
+            ArrayList<Room> filteredRooms = new ArrayList<>();
 
-    String capacity;
+            ConnectionDB database = new ConnectionDB();
 
-    int chain;
+            try {
+                Connection db = database.getConnection();
+                String sql = "SELECT hr.roomid, hr.hotelid, hr.price, hr.extension, hr.damages, hr.capacity, hr.sea_mountainview " +
+                        "FROM hotel_room hr " +
+                        "LEFT JOIN hotel h ON hr.hotelid = h.hotelid " +
+                        "WHERE hr.roomid NOT IN (SELECT roomid FROM booking WHERE start_date <= ? AND end_date >= ?) " +
+                        "AND hr.roomid NOT IN (SELECT roomid FROM renting WHERE end_date >= ?) ";
 
-    int category;
+                if (chainId != 0) {
+                    sql += "AND h.chainid = ? ";
+                }
 
-    int num_of_rooms;
+                if (hotelStar != 0) {
+                    sql += "AND h.hotelstar = ? ";
+                }
 
-    double price;
+                if (capacity != null) {
+                    sql += "AND hr.capacity = ? ";
+                }
 
-    public ArrayList<Room> search(String startDate, String endDate, String capacity, int chain, int category, int number_of_rooms, double price) {
+                if (price != 0) {
+                    sql += "AND hr.price <= ? ";
+                }
 
-        ArrayList<Room> filteredRooms = new ArrayList<Room>();
+                if (totalRooms != 0) {
+                    sql += "AND room_number >= ? ";
+                }
 
-        this.startDate = startDate;
-        this.endDate = endDate;
-        this.capacity = capacity;
-        this.chain = chain;
-        this.category = category;
-        this.num_of_rooms = number_of_rooms;
-        this.price = price;
+                // Set parameters for prepared statement
+                PreparedStatement ps = db.prepareStatement(sql);
+                ps.setDate(1, new java.sql.Date(bookingDate.getTime()));
+                ps.setDate(2, new java.sql.Date(bookingDate.getTime()));
+                ps.setDate(3, new java.sql.Date(startDate.getTime()));
 
-        ConnectionDB database = new ConnectionDB();
+                int parameterIndex = 4; // Index for the first parameter after dates
 
-        try {
-            Connection db = database.getConnection();
-            Statement st = db.createStatement();
-            ResultSet rs = st.executeQuery("SELECT hotel_room.\"roomid\", hotel_room.\"hotelid\", price, extension, damages, capacity, hotel_room.\"sea_mountainview\" FROM hotel_room " +
-                    "LEFT JOIN hotel ON hotel_room.\"hotelid\" = hotel.\"hotelid\" " +
-                    "LEFT JOIN renting ON hotel_room.\"roomid\" = renting.\"roomid\" " +
-                    "LEFT JOIN booking ON hotel_room.\"roomid\" = booking.\"roomid\" " +
-                    "WHERE ((booking.\"bookingid\" IS NULL AND renting.\"rentingid\" IS NULL " +
-                    "OR NOT (booking.start_date <= DATE '" + this.startDate + "' AND DATE '" + this.endDate + "' <= booking.end_date) AND booking.\"bookingid\" IS NOT NULL " +
-                    "OR NOT (renting.start_date <= DATE '" + this.startDate + "' AND DATE '" + this.endDate + "' <= renting.end_date) AND renting.\"rentingid\" IS NOT NULL) OR " + this.startDate + " IS NULL OR " + this.endDate + " IS NULL)" +
-                    "AND (capacity = '" + this.capacity + "' OR " + this.capacity + " IS NULL)" +
-                    "AND (hotel.\"chainid\" = " + Integer.toString(this.chain) + " OR " + Integer.toString(this.chain) + " IS NULL)" +
-                    "AND (hotel.\"hotelstar\" = " + Integer.toString(this.category) + " OR " + Integer.toString(this.category) + " IS NULL)" +
-                    "AND (room_number >= " + Integer.toString(this.num_of_rooms) + " OR " + Integer.toString(this.num_of_rooms) + " IS NULL)" +
-                    "AND (price <= " + Double.toString(this.price) + " OR " + Double.toString(this.price) + " IS NULL)");
-            while (rs.next()) {
-                Room room = new Room(rs.getInt("roomid"), rs.getInt("hotelid"), rs.getDouble("price"), rs.getString("capacity"), rs.getString("sea_mountain_view"), rs.getBoolean("extension"), rs.getBoolean("damage"));
+                if (chainId != 0) {
+                    ps.setInt(parameterIndex++, chainId);
+                }
 
-                filteredRooms.add(room);
+                if (hotelStar != 0) {
+                    ps.setInt(parameterIndex++, hotelStar);
+                }
+
+                if (capacity != null) {
+                    ps.setString(parameterIndex++, capacity);
+                }
+
+                if (price != 0) {
+                    ps.setDouble(parameterIndex++, price);
+                }
+
+                if (totalRooms != 0) {
+                    ps.setInt(parameterIndex, totalRooms);
+                }
+
+                ResultSet rs = ps.executeQuery();
+
+                while (rs.next()) {
+                    Room room = new Room(rs.getInt("roomid"), rs.getInt("hotelid"), rs.getDouble("price"), rs.getString("capacity"), rs.getString("sea_mountainview"), rs.getBoolean("extension"), rs.getBoolean("damages"));
+                    filteredRooms.add(room);
+                }
+
+                rs.close();
+                ps.close();
+                return filteredRooms;
+            } catch (Exception e) {
+                throw new RuntimeException(e);
             }
-            rs.close();
-            st.close();
-            return filteredRooms;
-        } catch (Exception e) {
-            throw new RuntimeException(e);
         }
     }
-}

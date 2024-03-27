@@ -20,7 +20,7 @@
 
 <div class='button-container1'>
     <button onclick="window.location.href='customer_search.jsp'" class="button1"> Search for rooms</button>
-    <button onclick="window.location.href='customer_booking.jsp'" class="button1"> View bookings </button>
+    <button onclick="window.location.href='customer_view_booking.jsp'" class="button1"> View bookings </button>
     <button onclick="window.location.href='logout.jsp'" class="button1">Log out </button>
 </div>
 

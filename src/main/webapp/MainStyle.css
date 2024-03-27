@@ -198,3 +198,47 @@ select {
   padding: 20px;
   border-radius: 10px;
 }
+
+.room-info li {
+    margin-bottom: 5px;
+}
+
+.room-info li:first-child {
+    font-weight: bold;
+}
+
+.room-info li span {
+    color: #555;
+}
+
+.room-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start; /* Adjust this value to align the button closer to the text */
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.room-info {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.book-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.book-button:hover {
+    background-color: #0056b3;
+}
+
+h2{
+    text-align: center;
+}
