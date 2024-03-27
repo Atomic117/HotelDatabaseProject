@@ -1,5 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="java.util.*" %>
+<%@ page import="com.demo.SignIn" %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,10 +11,8 @@
             <script>
                 var urlParams = new URLSearchParams(window.location.search);
                 var error = urlParams.get('error');
-                if (error === 'takenName') {
-                    alert("Error: Username taken already");
-                } else if (error === 'invalidID'){
-                    alert("Error: Incorrect chainID");
+                if (error === 'problem') {
+                    alert("Error: problem with signing up);
                 }
             </script>
 </head>
@@ -21,31 +21,39 @@
     <ul>
         <li><a href="index.jsp">Home</a></li>
         <li><a href="login.jsp">Login</a></li>
-        <li><a href="searchforrooms.jsp">Rent</a></li>
+        <li><a href="customer_search.jsp">Search Rooms</a></li>
         <li><a href="about.jsp">About Us</a></li>
     </ul>
 </nav>
 
 <%
+
+    if (session.getAttribute("type").equals("customer")) {
+        response.sendRedirect("customer.jsp");
+    } else if (session.getAttribute("type").equals("employee")){
+        response.sendRedirect("employee.jsp");
+    } else if (session.getAttribute("type").equals("admin")){
+        response.sendRedirect("admin.jsp");
+    }
+
     if ("POST".equalsIgnoreCase(request.getMethod())) {
         // Retrieve form parameters
         String username = request.getParameter("username");
         String password = request.getParameter("password");
-        String chainid = request.getParameter("chainid");
-        String address = request.getParameter("address"); // Corrected method name
-        String role = request.getParameter("role"); // Corrected method name
-        String ssn = request.getParameter("ssn"); // Corrected method name
+        int chainid = Integer.parseInt(request.getParameter("chainid"));
+        String address = request.getParameter("address");
+        String role = request.getParameter("role");
+        int ssn = Integer.parseInt(request.getParameter("ssn"));
 
-        // READ FROM DATABASE
-        String takenUserName = "user";
-        String validChainID = "123";
-
-        if (username.equals(takenUserName)) {
-            response.sendRedirect("signupemployee.jsp?error=takenName");
-        } else if (!validChainID.equals(chainid)) {
-            response.sendRedirect("signupemployee.jsp?error=invalidID");
-        } else {
+        SignIn signin = new SignIn();
+        try {
+            boolean worked = signin.signUpEmployee(username, password, ssn, address, chainid, role);
+            session.setAttribute("name", username);
+            session.setAttribute("type", "employee");
             response.sendRedirect("employee.jsp");
+        } catch (Exception e){
+            e.printStackTrace();
+            response.sendRedirect("signupemployee.jsp?error=problem");
         }
     }
 %>

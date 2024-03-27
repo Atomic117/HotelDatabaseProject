@@ -47,8 +47,8 @@ li a:hover {
 }
 
 .button-container1 {
-    display: flex; /* Use flexbox */
-    justify-content: center; /* Center the items horizontally */
+    display: flex;
+    justify-content: center;
 }
 
 .button1 {
@@ -136,4 +136,65 @@ p{
 
 .signup-button button[type="submit"]:hover {
     background-color: #218838;
+}
+
+.box_container {
+   display: flex;
+   justify-content: center;
+   height: 100vh; /* Make container fill the viewport height */
+}
+
+#dropdownForm {
+    max-width: 400px; /* Adjust width as needed */
+    padding: 20px; /* Add padding to the form */
+    background-color: #f9f9f9; /* Add a background color */
+    border-radius: 8px; /* Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow for depth */
+}
+
+.labelbox {
+    display: block;
+    margin-bottom: 10px; /* Increase margin to provide more space */
+    font-weight: bold;
+    font-style: italic;
+    font-size: 18px; /* Increase font size */
+}
+/* Style for dropdown select elements */
+select {
+    width: 100%; /* Make dropdowns fill the entire width of the form */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+/* Style for submit button */
+.submitbutton {
+    width: 100%; /* Make button fill the entire width of the form */
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Hover effect for submit button */
+.submitbutton:hover {
+    background-color: #0056b3;
+}
+
+.datecontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Style the form */
+.formstuff {
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 10px;
 }

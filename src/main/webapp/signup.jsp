@@ -8,6 +8,17 @@
     <link rel="stylesheet" href="MainStyle.css">
 </head>
 <body>
+
+<%
+    if (session.getAttribute("type").equals("customer")) {
+        response.sendRedirect("customer.jsp");
+    } else if (session.getAttribute("type").equals("employee")){
+        response.sendRedirect("employee.jsp");
+    } else if (session.getAttribute("type").equals("admin")){
+        response.sendRedirect("admin.jsp");
+    }
+%>
+
 <nav>
     <ul>
         <li><a href="index.jsp">Home</a></li>

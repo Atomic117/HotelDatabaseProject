@@ -13,10 +13,16 @@
     <ul>
         <li><a href="index.jsp">Home</a></li>
         <li><a href="login.jsp">Login</a></li>
-        <li><a href="searchforrooms.jsp">Rent</a></li>
+        <li><a href="customer_search.jsp">Search Rooms</a></li>
         <li><a href="about.jsp">About Us</a></li>
     </ul>
 </nav>
+
+<%
+   session.setAttribute("name", "");
+   session.setAttribute("type", "");
+   session.setAttribute("filter", "no");
+%>
 
 <h1> Hotel Booking Website</h1>
 <div class="image-container">
@@ -31,7 +37,7 @@
             <button type="submit" class="button1">Login</button>
         </form>
 
-        <form action="searchforrooms.jsp">
+        <form action="customer_search.jsp">
             <button type="submit" class="button1">Search for Rooms</button>
         </form>
     </div>

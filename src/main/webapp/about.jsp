@@ -12,7 +12,7 @@
     <ul>
         <li><a href="index.jsp">Home</a></li>
         <li><a href="login.jsp">Login</a></li>
-        <li><a href="searchforrooms.jsp">Rent</a></li>
+        <li><a href="customer_search.jsp">Search Rooms</a></li>
         <li><a href="about.jsp">About Us</a></li>
     </ul>
 </nav>

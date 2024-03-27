@@ -1,9 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="java.util.*" %>
-<%@ page import="javax.servlet.http.HttpServletRequest" %>
-<%@ page import="javax.servlet.http.HttpSession" %>
-<%@ page import="UserSession" %>
-<%@ page import="SignIn" %>
+<%@ page import="com.demo.SignIn" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -14,10 +11,8 @@
         <script>
             var urlParams = new URLSearchParams(window.location.search);
             var error = urlParams.get('error');
-            if (error === 'invalidCredentials') {
-                alert("Error: Username taken already");
-            } else (error === 'unknown'){
-                alert("Error: Database")
+            if (error === 'problem') {
+                alert("Error: problem occured with signing up");
             }
         </script>
 </head>
@@ -26,40 +21,35 @@
     <ul>
         <li><a href="index.jsp">Home</a></li>
         <li><a href="login.jsp">Login</a></li>
-        <li><a href="searchforrooms.jsp">Rent</a></li>
+        <li><a href="customer_search.jsp">Search Rooms</a></li>
         <li><a href="about.jsp">About Us</a></li>
     </ul>
 </nav>
-
-
 <%
+    if (session.getAttribute("type").equals("customer")) {
+        response.sendRedirect("customer.jsp");
+    } else if (session.getAttribute("type").equals("employee")){
+        response.sendRedirect("employee.jsp");
+    } else if (session.getAttribute("type").equals("admin")){
+        response.sendRedirect("admin.jsp");
+    }
+
+
     if ("POST".equalsIgnoreCase(request.getMethod())) {
-        // Retrieve form parameters
         String username = request.getParameter("username");
         String password = request.getParameter("password");
+        int id = Integer.parseInt(request.getParameter("typeid"));
         String address = request.getParameter("address");
-        String id = request.getParameter("typeID");
 
-        // READ FROM DATABASE (This part is missing)
-
-        String validUsername = "user";
-
-        boolean isOkay = !validUsername.equals(username);
-
-        if (isOkay) {
-            try {
-                // Create session and redirect if username is okay
-                SignIn signIn = new SignIn();
-                signIn.signUpCustomer(username, password, Integer.parseInt(id), address);
-                UserSession.createSession(request, username, password, "customer");
-                response.sendRedirect("customer.jsp");
-            } catch (Exception e) {
-                // Handle exception, e.g., database error
-                response.sendRedirect("signupcustomer.jsp?error=unknownError");
-            }
-        } else {
-            // Redirect with error if username is not okay
-            response.sendRedirect("signupcustomer.jsp?error=invalidCredentials");
+        SignIn signin = new SignIn();
+        try {
+            boolean worked = signin.signUpCustomer(username, password, id, address);
+            session.setAttribute("name", username);
+            session.setAttribute("type", "customer");
+            response.sendRedirect("customer.jsp");
+        } catch (Exception e){
+            e.printStackTrace();
+            response.sendRedirect("signupcustomer.jsp?error=problem");
         }
     }
 %>
@@ -78,8 +68,8 @@
         <input type="text" id="address" name="address" required>
      </div>
      <div class="form-group">
-        <label for="typeID">ID Number:</label>
-        <input type="text" id="typeID" name="typeID" required>
+        <label for="typeid">ID Number:</label>
+        <input type="text" id="typeid" name="typeid" required>
      </div>
     <button type="submit">Sign Up</button>
 </form>

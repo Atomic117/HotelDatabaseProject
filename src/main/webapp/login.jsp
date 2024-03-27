@@ -1,5 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="java.util.*" %>
+<%@ page import="com.demo.SignIn" %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,6 +13,8 @@
         var error = urlParams.get('error');
         if (error === 'invalidCredentials') {
             alert("Error: Invalid username or password");
+        } else if (error === 'problem'){
+            alert("Error: Database");
         }
     </script>
 
@@ -20,33 +24,56 @@
     <ul>
         <li><a href="index.jsp">Home</a></li>
         <li><a href="login.jsp">Login</a></li>
-        <li><a href="view.jsp">Rent</a></li>
+        <li><a href="customer_search.jsp">Search Rooms</a></li>
         <li><a href="about.jsp">About Us</a></li>
     </ul>
 </nav>
 
 <%
+    if (session.getAttribute("type").equals("customer")) {
+        response.sendRedirect("customer.jsp");
+    } else if (session.getAttribute("type").equals("employee")){
+        response.sendRedirect("employee.jsp");
+    } else if (session.getAttribute("type").equals("admin")){
+        response.sendRedirect("admin.jsp");
+    }
+
+
     if ("POST".equalsIgnoreCase(request.getMethod())) {
         // Retrieve form parameters
         String username = request.getParameter("username");
         String password = request.getParameter("password");
 
-        //READ FROM DATABASE
-        String validUsername = "user";
-        String validPassword = "password";
+        boolean isAdmin = "admin".equals(username) && "admin".equals(password);
+        boolean isEmployee = false;
+        boolean isCustomer = false;
 
-        boolean isAuthenticated = validUsername.equals(username) && validPassword.equals(password);
-        boolean isEmployee = true;
 
-        if (isAuthenticated) {
-            if (isEmployee) {
-                response.sendRedirect("employee.jsp");
-            } else {
-                response.sendRedirect("customer.jsp");
-            }
+        SignIn signin = new SignIn();
+        try {
+            isEmployee = signin.employeeLogIn(username, password);
+            isCustomer = signin.customerLogIn(username, password);
+        } catch (Exception e){
+            e.printStackTrace();
+            response.sendRedirect("login.jsp?error=problem");
+        }
+
+
+        if (isAdmin){
+            session.setAttribute("type", "admin");
+            response.sendRedirect("admin.jsp");
+        } else if (isEmployee){
+            session.setAttribute("name", username);
+            session.setAttribute("type", "employee");
+            response.sendRedirect("employee.jsp");
+        } else if (isCustomer){
+            session.setAttribute("name", username);
+            session.setAttribute("type", "customer");
+            response.sendRedirect("customer.jsp");
         } else {
             response.sendRedirect("login.jsp?error=invalidCredentials");
         }
+
     }
 %>
 

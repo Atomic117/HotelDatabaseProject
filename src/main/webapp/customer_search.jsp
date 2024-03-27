@@ -16,24 +16,20 @@
     </ul>
 </nav>
 
-<h1> You are logged in as: Customer</h1>
+<h1> Searching for Rooms </h1>
 
 <div class='button-container1'>
-    <button onclick="window.location.href='customer_search.jsp'" class="button1"> Search for rooms</button>
-    <button onclick="window.location.href='customer_booking.jsp'" class="button1"> View bookings </button>
-    <button onclick="window.location.href='logout.jsp'" class="button1">Log out </button>
+    <button onclick="window.location.href='customer_filter.jsp'" class="button1"> Search via Filter</button>
+    <button onclick="window.location.href='customer_view_1.jsp'" class="button1"> View All Avaliable Rooms </button>
+    <button onclick="window.location.href='customer_view_2.jsp'" class="button1">View Total Capacity </button>
+    <button onclick="window.location.href='customer.jsp'" class="button1">Go Back</button>
 </div>
 
 <%
-    if (session.getAttribute("type").equals("customer")) {
-
-    } else if (session.getAttribute("type").equals("employee")){
+    if (session.getAttribute("type").equals("employee")){
         response.sendRedirect("employee.jsp");
     } else if (session.getAttribute("type").equals("admin")){
         response.sendRedirect("admin.jsp");
-    }
-    else {
-        response.sendRedirect("index.jsp");
     }
 %>
 
