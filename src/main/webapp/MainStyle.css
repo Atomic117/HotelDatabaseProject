@@ -1,11 +1,11 @@
 
 body {
-    font-family: Arial, sans-serif; /* Set the default font family */
-    background-color: #B0E2FF; /* Set the background color */
-    color: #333; /* Set the default text color */
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
-    line-height: 1.6; /* Set the line height for better readability */
+    font-family: Arial, sans-serif;
+    background-color: #B0E2FF;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
 }
 
 h1 {
@@ -16,34 +16,34 @@ h1 {
 .image-container {
     display: flex;
     justify-content: space-around;
-    margin-top: 20px; /* Adjust margin as needed */
+    margin-top: 20px;
 }
 
 nav {
-    background-color: #007bff; /* Background color of the navigation bar */
-    padding: 10px 0; /* Padding at the top and bottom of the navigation bar */
+    background-color: #007bff;
+    padding: 10px 0;
 }
 
 ul {
-    list-style-type: none; /* Remove the default bullet points */
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
-    text-align: center; /* Center the list items horizontally */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
 }
 
 li {
-    display: inline; /* Display list items horizontally */
+    display: inline;
 }
 
 li a {
-    display: inline-block; /* Display links as inline-block elements */
-    color: white; /* Text color of the links */
-    text-decoration: none; /* Remove default underline */
-    padding: 10px 20px; /* Padding around the links */
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
 }
 
 li a:hover {
-    background-color: #00BFFF; /* Background color on hover */
+    background-color: #00BFFF;
 }
 
 .button-container1 {
@@ -63,7 +63,7 @@ li a:hover {
     font-family: Arial, sans-serif;
 }
 .button1:hover {
-    background-color: #00BFFF; /* Darker cyan color on hover */
+    background-color: #00BFFF;
 }
 
 p{
@@ -74,7 +74,7 @@ p{
 }
 
 .login-form {
-    margin: 20px auto; /* Center the form horizontally */
+    margin: 20px auto;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -101,7 +101,7 @@ p{
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 3px;
-    box-sizing: border-box; /* Ensure padding and border are included in the width */
+    box-sizing: border-box;
 }
 
 .login-form button[type="submit"] {
@@ -118,7 +118,6 @@ p{
     background-color: #0056b3;
 }
 
-/* CSS for the sign-up button */
 .signup-button {
     margin-top: 10px;
     text-align: center;
@@ -141,27 +140,27 @@ p{
 .box_container {
    display: flex;
    justify-content: center;
-   height: 100vh; /* Make container fill the viewport height */
+   height: 100vh;
 }
 
 #dropdownForm {
-    max-width: 400px; /* Adjust width as needed */
-    padding: 20px; /* Add padding to the form */
-    background-color: #f9f9f9; /* Add a background color */
-    border-radius: 8px; /* Add rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow for depth */
+    max-width: 400px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .labelbox {
     display: block;
-    margin-bottom: 10px; /* Increase margin to provide more space */
+    margin-bottom: 10px;
     font-weight: bold;
     font-style: italic;
-    font-size: 18px; /* Increase font size */
+    font-size: 18px;
 }
-/* Style for dropdown select elements */
+
 select {
-    width: 100%; /* Make dropdowns fill the entire width of the form */
+    width: 100%;
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -169,9 +168,8 @@ select {
     margin-bottom: 10px;
 }
 
-/* Style for submit button */
 .submitbutton {
-    width: 100%; /* Make button fill the entire width of the form */
+    width: 100%;
     padding: 10px;
     background-color: #007bff;
     color: #fff;
@@ -180,7 +178,6 @@ select {
     cursor: pointer;
 }
 
-/* Hover effect for submit button */
 .submitbutton:hover {
     background-color: #0056b3;
 }
@@ -192,7 +189,7 @@ select {
   height: 100vh;
 }
 
-/* Style the form */
+
 .formstuff {
   background-color: #f2f2f2;
   padding: 20px;
@@ -215,7 +212,7 @@ select {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: flex-start; /* Adjust this value to align the button closer to the text */
+    align-items: flex-start;
     border: 1px solid #ccc;
     padding: 10px;
     margin-bottom: 20px;
@@ -241,4 +238,18 @@ select {
 
 h2{
     text-align: center;
+}
+
+.book-room-button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10px;
 }

@@ -5,7 +5,6 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class ConnectionDB {
-
     private final String ip = "localhost";
     private final String dbServerPort = "5432";//"5000";
     private final String dbName = "hotelproject";//"Hotel";

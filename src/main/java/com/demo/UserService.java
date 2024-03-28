@@ -5,8 +5,7 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.sql.PreparedStatement;
 
-public class SignIn {
-
+public class UserService {
     public boolean customerLogIn(String username, String password) {
         ConnectionDB database = new ConnectionDB();
         try (Connection db = database.getConnection();
@@ -70,4 +69,40 @@ public class SignIn {
             return false;
         }
     }
+
+    public int findCustomerID(String username) {
+        int userID = -1; // Default userID if not found
+        ConnectionDB database = new ConnectionDB();
+        try (Connection db = database.getConnection();
+             PreparedStatement st = db.prepareStatement("SELECT customerid FROM customer WHERE fullname=?")) {
+            st.setString(1, username);
+            try (ResultSet rs = st.executeQuery()) {
+                if (rs.next()) {
+                    userID = rs.getInt("customerid");
+                }
+            }
+        } catch (Exception e) {
+            throw new RuntimeException("Error occurred while processing query", e);
+        }
+        return userID;
+    }
+
+    public int findEmployeeID(String username) {
+        int userID = -1; // Default userID if not found
+        ConnectionDB database = new ConnectionDB();
+        try (Connection db = database.getConnection();
+             PreparedStatement st = db.prepareStatement("SELECT employeeid FROM employee WHERE fullname=?")) {
+            st.setString(1, username);
+            try (ResultSet rs = st.executeQuery()) {
+                if (rs.next()) {
+                    userID = rs.getInt("employeeid");
+                }
+            }
+        } catch (Exception e) {
+            throw new RuntimeException("Error occurred while processing query", e);
+        }
+        return userID;
+    }
+
+
 }

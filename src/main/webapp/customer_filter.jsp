@@ -115,7 +115,7 @@
         String checkOutDate = request.getParameter("checkOutDate");
 
         if (Objects.isNull(checkInDate) || Objects.isNull(checkOutDate) || checkInDate.isEmpty() || checkOutDate.isEmpty()) {
-              response.sendRedirect("customer_search.jsp?error=dates");
+              response.sendRedirect("customer_filter.jsp?error=dates");
               return;
         }
 
@@ -125,12 +125,12 @@
         LocalDate currentDate = LocalDate.now();
 
         if (formattedCheckIn.isBefore(currentDate) || formattedCheckOut.isBefore(currentDate)) {
-            response.sendRedirect("customer_search.jsp?error=invalid");
+            response.sendRedirect("customer_filter.jsp?error=invalid");
             return;
         }
 
         if (formattedCheckOut.isBefore(formattedCheckIn)) {
-             response.sendRedirect("customer_search.jsp?error=invalid");
+             response.sendRedirect("customer_filter.jsp?error=invalid");
              return;
         }
 

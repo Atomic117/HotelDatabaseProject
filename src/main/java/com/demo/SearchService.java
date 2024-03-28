@@ -2,11 +2,10 @@ package com.demo;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
-import java.sql.Statement;
 import java.util.*;
 import java.sql.PreparedStatement;
 
-public class Search {
+public class SearchService {
 
         public ArrayList<Room> search(int chainId, Date bookingDate, Date startDate, int hotelStar, String capacity, double price, int totalRooms) {
 

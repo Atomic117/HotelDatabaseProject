@@ -1,6 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="java.util.*" %>
-<%@ page import="com.demo.SignIn" %>
+<%@ page import="com.demo.UserService" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -49,7 +49,7 @@
         boolean isCustomer = false;
 
 
-        SignIn signin = new SignIn();
+        UserService signin = new UserService();
         try {
             isEmployee = signin.employeeLogIn(username, password);
             isCustomer = signin.customerLogIn(username, password);

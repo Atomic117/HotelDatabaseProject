@@ -1,4 +1,4 @@
-<%@ page import="com.demo.Search" %>
+<%@ page import="com.demo.SearchService" %>
 <%@ page import="com.demo.Room" %>
 <%@ page import="java.util.List" %>
 <%@ page import="java.util.ArrayList" %>
@@ -29,6 +29,12 @@
         response.sendRedirect("customer.filter.jsp");
     }
 
+    if(session.getAttribute("type").equals("employee")){
+        response.sendRedirect("employee.jsp");
+    } else if (session.getAttribute("type").equals("admin")){
+        response.sendRedirect("admin.jsp");
+    }
+
     Date inDate = (Date) session.getAttribute("indate");
     Date outDate = (Date) session.getAttribute("outdate");
     String room = (String) session.getAttribute("room");
@@ -37,7 +43,11 @@
     int total = (int) session.getAttribute("total");
     double price = (double) session.getAttribute("price");
 
-    Search findroom = new Search();
+    if ("any".equals(room)) {
+     room = null;
+    }
+
+    SearchService findroom = new SearchService();
     ArrayList<Room> rooms = null;
 
     try {
@@ -71,6 +81,12 @@
         }
     %>
 </div>
+
+    <div class="button-container1">
+        <form action="customer_filter.jsp">
+            <button type="submit" class="button1">Enter a new Search</button>
+        </form>
+    </div>
 
 
 </body>

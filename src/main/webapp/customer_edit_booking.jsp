@@ -1,9 +1,9 @@
 <%@ page import="java.util.*" %>
 <%@ page import="javax.servlet.http.*" %>
 <%@ page language="java" %>
+<%@ page import="com.demo.Booking" %>
 <%@ page import="com.demo.Room" %>
 <%@ page import="com.demo.BookingService" %>
-<%@ page import="com.demo.UserService" %>
 <%@ page import="java.util.Date" %>
 
 <!DOCTYPE html>
@@ -24,12 +24,10 @@
     </ul>
 </nav>
 
-<h1> Selected Room: </h1>
+<h1> Selected Booking: </h1>
 
 <%
-    if (session.getAttribute("filter").equals("no")){
-        response.sendRedirect("customer_search.jsp");
-    } else if (session.getAttribute("type").equals("customer")) {
+    if (session.getAttribute("type").equals("customer")) {
 
     } else if (session.getAttribute("type").equals("employee")){
         response.sendRedirect("employee.jsp");
@@ -40,29 +38,26 @@
         response.sendRedirect("login_redirect.jsp");
     }
 
-    int ids = Integer.parseInt(request.getParameter("roomID"));
+    int booksid = Integer.parseInt(request.getParameter("bookingid"));
     BookingService service = new BookingService();
     Room selectedRoom = null;
+    Booking selectedBooking = null;
 
     try {
-          selectedRoom = service.getRoomByID(ids);
+        selectedBooking = service.getBookingByBookingID(booksid);
+        selectedRoom = service.getRoomByBookingID(booksid);
     } catch (Exception e){
           e.printStackTrace();
-          response.sendRedirect("customer_b_error.jsp");
+          response.sendRedirect("customer_d_error.jsp");
     }
 
     if (request.getMethod().equals("POST")) {
-        UserService service2 = new UserService();
-        String username = (String) session.getAttribute("name");
-        Date startd = (Date) session.getAttribute("indate");
-        Date endd = (Date) session.getAttribute("outdate");
         try {
-            int custid = service2.findCustomerID(username);
-            boolean worked = service.newBooking(custid, ids, startd, endd);
+            boolean worked = service.deleteBooking(booksid);
             if (worked){
-               response.sendRedirect("customer_b_success.jsp");
+               response.sendRedirect("customer_d_success.jsp");
             } else {
-               response.sendRedirect("customer_b_error.jsp");
+               response.sendRedirect("customer_d_error.jsp");
             }
 
         } catch (Exception e){
@@ -72,6 +67,7 @@
     }
 %>
 
+<h2> Room Info: </h2>
 <div>
     <div class="room-container">
         <ul class="room-info">
@@ -86,14 +82,25 @@
     </div>
 </div>
 
+<h2> Booking Info: </h2>
+<div>
+    <div class="room-container">
+        <ul class="room-info">
+            <li><span>Booking ID: </span> <%= selectedBooking.getBookingID() %></li>
+            <li><span>Start Date: </span> <%= selectedBooking.getStartDate() %></li>
+            <li><span>End Date: </span> <%= selectedBooking.getEndDate() %></li>
+        </ul>
+    </div>
+</div>
+
 <form method="post">
     <input type="hidden" name="roomID" value="<%= selectedRoom.getRoomID() %>">
-    <button type="submit" class="book-room-button">Book Room</button>
+    <button type="submit" class="book-room-button">Delete Booking</button>
 </form>
 
 <div class="button-container1">
-     <form action="customer_filter_search.jsp">
-         <button type="submit" class="button1">Back to Search</button>
+     <form action="customer_view_booking.jsp">
+         <button type="submit" class="button1">Go Back</button>
      </form>
 </div>
 

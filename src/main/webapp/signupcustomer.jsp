@@ -1,6 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="java.util.*" %>
-<%@ page import="com.demo.SignIn" %>
+<%@ page import="com.demo.UserService" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -41,7 +41,7 @@
         int id = Integer.parseInt(request.getParameter("typeid"));
         String address = request.getParameter("address");
 
-        SignIn signin = new SignIn();
+        UserService signin = new UserService();
         try {
             boolean worked = signin.signUpCustomer(username, password, id, address);
             session.setAttribute("name", username);

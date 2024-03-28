@@ -27,13 +27,11 @@ public class Booking {
     public int getRoomID(){
         return roomID;
     }
-    public String getStartDate(){
-        DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
-        return df.format(startDate);
+    public Date getStartDate(){
+        return startDate;
     }
-    public String getEndDate(){
-        DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
-        return df.format(endDate);
+    public Date getEndDate(){
+        return endDate;
     }
     public void setBookingID(int id){
         bookingID = id;

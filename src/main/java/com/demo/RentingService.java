@@ -3,33 +3,23 @@ package com.demo;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
-import java.util.ArrayList;
 
-public class BookingToRenting {
-
-    ArrayList<Booking> bookingList = new ArrayList<Booking>();
-
-    public ArrayList<Booking> bookingList() {
-
+public class RentingService {
+    public String createRenting(int customerID, int roomID, int paymentNum, String start_date, String end_date){
         ConnectionDB database = new ConnectionDB();
 
         try {
             Connection db = database.getConnection();
             Statement st = db.createStatement();
-            ResultSet rs = st.executeQuery("SELECT * FROM booking");
-            while (rs.next()) {
-                Booking room = new Booking(rs.getInt("bookingid"), rs.getInt("customerid"), rs.getInt("roomid"), rs.getDate("start_date"), rs.getDate("end_date"));
+            ResultSet rs = st.executeQuery("INSERT INTO renting (customerid, roomid, payment, start_date, end_date) VALUES (" + Integer.toString(customerID) + ", " + Integer.toString(roomID) + ", " + Integer.toString(paymentNum) + ", DATE '" + start_date + "', DATE '" + end_date + "')");
+            return "New Renting Created";
 
-                bookingList.add(room);
-            }
-            rs.close();
-            st.close();
-            return bookingList;
+
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            return "Error in Creating Renting";
         }
-    }
 
+    }
 
     public String changeBooking_to_Renting(int bookingID, int paymentNum){
         ConnectionDB database = new ConnectionDB();
@@ -49,4 +39,5 @@ public class BookingToRenting {
             return "Error in Switching Booking to Renting";
         }
     }
+
 }
