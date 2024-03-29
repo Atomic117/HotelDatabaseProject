@@ -19,9 +19,15 @@
 <h1> You are logged in as: Admin</h1>
 
 <div class='button-container1'>
-    <button onclick="window.location.href='adminsql.jsp'" class="button1"> Perform SQL</button>
+    <button onclick="window.location.href='admin_view_customer.jsp'" class="button1"> Edit Customer</button>
+    <button onclick="window.location.href='admin_view_employee.jsp'" class="button1"> Edit Employee</button>
+    <button onclick="window.location.href='admin_view_hotel.jsp'" class="button1"> Edit Hotel </button>
+    <button onclick="window.location.href='admin_view_room.jsp'" class="button1"> Edit Rooms</button>
+</div>
+<div class='button-container1'>
     <button onclick="window.location.href='logout.jsp'" class="button1">Log out </button>
 </div>
+
 
 <%
     if (session.getAttribute("type").equals("customer")) {

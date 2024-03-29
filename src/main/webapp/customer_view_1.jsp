@@ -28,6 +28,7 @@
      } else if (session.getAttribute("type").equals("admin")){
          response.sendRedirect("admin.jsp");
      }
+
  %>
 
  <%

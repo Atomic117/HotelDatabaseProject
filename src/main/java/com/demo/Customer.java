@@ -21,7 +21,7 @@ public class Customer {
         return customerID;
     }
 
-    public String fullName(){
+    public String getFullName(){
         return fullName;
     }
 

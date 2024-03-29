@@ -28,5 +28,6 @@
 
 <p> This is a simple website build using Java, Apache, Servlet, JSON, HTML, CSS and PostgreSQL. It is designed by Thomas, Ben and Ashley</p>
 <p> This website simulates a booking for various Hotels. It support customer functionality and employee functionality </p>
+<p> Additionally, it has an admin functionality </p>
 </body>
 </html>

@@ -28,6 +28,7 @@
     } else {
         response.sendRedirect("index.jsp");
     }
+
 &>
 
 <h1>Error: could not make the views</h1>

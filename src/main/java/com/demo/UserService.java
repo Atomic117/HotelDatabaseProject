@@ -4,8 +4,10 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.sql.PreparedStatement;
+import java.util.Date;
 
 public class UserService {
+    //Sees if the username and password exist in a row of Customer
     public boolean customerLogIn(String username, String password) {
         ConnectionDB database = new ConnectionDB();
         try (Connection db = database.getConnection();
@@ -13,13 +15,14 @@ public class UserService {
             st.setString(1, username);
             st.setString(2, password);
             try (ResultSet rs = st.executeQuery()) {
-                return rs.next(); // Check if any row is returned
+                return rs.next();
             }
         } catch (Exception e) {
             throw new RuntimeException("Error occurred while processing login", e);
         }
     }
 
+    //Sees if the username and password exist in a row of Employee
     public boolean employeeLogIn(String username, String password) {
         ConnectionDB database = new ConnectionDB();
         try (Connection db = database.getConnection();
@@ -27,13 +30,14 @@ public class UserService {
             st.setString(1, username);
             st.setString(2, password);
             try (ResultSet rs = st.executeQuery()) {
-                return rs.next(); // Check if any row is returned
+                return rs.next();
             }
         } catch (Exception e) {
             throw new RuntimeException("Error occurred while processing login", e);
         }
     }
 
+    //Creates a new customer
     public boolean signUpCustomer(String username, String password, int ID, String address) {
         ConnectionDB database = new ConnectionDB();
         try (Connection db = database.getConnection();
@@ -44,13 +48,14 @@ public class UserService {
                     address + "', '" +
                     password + "')";
             int rowsAffected = st.executeUpdate(query);
-            return rowsAffected > 0; // Return true if at least one row was affected (insert successful)
+            return rowsAffected > 0;
         } catch (Exception e) {
-            e.printStackTrace(); // Handle or log the exception properly
+            e.printStackTrace();
             return false;
         }
     }
 
+    //Creates a new employee
     public boolean signUpEmployee(String username, String password, int ssn, String address, int hotelID, String role) {
         ConnectionDB database = new ConnectionDB();
         try (Connection db = database.getConnection();
@@ -70,6 +75,7 @@ public class UserService {
         }
     }
 
+    //Finds customerID given the cookie username
     public int findCustomerID(String username) {
         int userID = -1; // Default userID if not found
         ConnectionDB database = new ConnectionDB();
@@ -87,8 +93,9 @@ public class UserService {
         return userID;
     }
 
+    //Finds employeeID given the cookie username
     public int findEmployeeID(String username) {
-        int userID = -1; // Default userID if not found
+        int userID = -1;
         ConnectionDB database = new ConnectionDB();
         try (Connection db = database.getConnection();
              PreparedStatement st = db.prepareStatement("SELECT employeeid FROM employee WHERE fullname=?")) {
@@ -103,6 +110,8 @@ public class UserService {
         }
         return userID;
     }
+
+
 
 
 }

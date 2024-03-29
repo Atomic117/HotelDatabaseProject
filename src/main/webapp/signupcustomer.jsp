@@ -8,13 +8,6 @@
     <meta charset="UTF-8">
     <title>Login</title>
     <link rel="stylesheet" href="MainStyle.css">
-        <script>
-            var urlParams = new URLSearchParams(window.location.search);
-            var error = urlParams.get('error');
-            if (error === 'problem') {
-                alert("Error: problem occured with signing up");
-            }
-        </script>
 </head>
 <body>
 <nav>
@@ -36,20 +29,24 @@
 
 
     if ("POST".equalsIgnoreCase(request.getMethod())) {
-        String username = request.getParameter("username");
-        String password = request.getParameter("password");
-        int id = Integer.parseInt(request.getParameter("typeid"));
-        String address = request.getParameter("address");
-
-        UserService signin = new UserService();
         try {
-            boolean worked = signin.signUpCustomer(username, password, id, address);
-            session.setAttribute("name", username);
-            session.setAttribute("type", "customer");
-            response.sendRedirect("customer.jsp");
+            String username = request.getParameter("username");
+            String password = request.getParameter("password");
+            int id = Integer.parseInt(request.getParameter("typeid"));
+            String address = request.getParameter("address");
+
+            UserService signin = new UserService();
+            try {
+                boolean worked = signin.signUpCustomer(username, password, id, address);
+                session.setAttribute("name", username);
+                session.setAttribute("type", "customer");
+                response.sendRedirect("customer.jsp");
+            } catch (Exception e){
+                e.printStackTrace();
+                response.sendRedirect("signup_error.jsp");
+            }
         } catch (Exception e){
-            e.printStackTrace();
-            response.sendRedirect("signupcustomer.jsp?error=problem");
+            response.sendRedirect("signup_error2.jsp");
         }
     }
 %>

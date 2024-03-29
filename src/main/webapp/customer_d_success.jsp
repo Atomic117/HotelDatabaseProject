@@ -27,6 +27,7 @@
     } else {
         response.sendRedirect("index.jsp");
     }
+
 %>
 <h1> Success: Booking has been deleted</h1>
 

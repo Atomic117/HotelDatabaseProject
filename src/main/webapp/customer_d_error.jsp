@@ -27,6 +27,7 @@
     } else {
         response.sendRedirect("index.jsp");
     }
+
 %>
 <h1> Error: could not delete Booking</h1>
 

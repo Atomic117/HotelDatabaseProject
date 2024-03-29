@@ -104,6 +104,12 @@
 <%
     session.setAttribute("filter", "no");
 
+    if(session.getAttribute("type").equals("employee")){
+        response.sendRedirect("employee.jsp");
+    } else if (session.getAttribute("type").equals("admin")){
+        response.sendRedirect("admin.jsp");
+    }
+
     if ("POST".equalsIgnoreCase(request.getMethod())) {
         // Retrieve form data from the request
         String roomType = request.getParameter("roomtypebox");

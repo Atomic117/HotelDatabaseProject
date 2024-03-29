@@ -86,12 +86,12 @@
     </div>
 </div>
 
-<form method="post">
-    <input type="hidden" name="roomID" value="<%= selectedRoom.getRoomID() %>">
-    <button type="submit" class="book-room-button">Book Room</button>
-</form>
-
 <div class="button-container1">
+    <form method="post">
+        <input type="hidden" name="roomID" value="<%= selectedRoom.getRoomID() %>">
+        <button type="submit" class="button1">Book Room</button>
+    </form>
+
      <form action="customer_filter_search.jsp">
          <button type="submit" class="button1">Back to Search</button>
      </form>

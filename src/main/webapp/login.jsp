@@ -8,15 +8,6 @@
     <meta charset="UTF-8">
     <title>Login</title>
     <link rel="stylesheet" href="MainStyle.css">
-    <script>
-        var urlParams = new URLSearchParams(window.location.search);
-        var error = urlParams.get('error');
-        if (error === 'invalidCredentials') {
-            alert("Error: Invalid username or password");
-        } else if (error === 'problem'){
-            alert("Error: Database");
-        }
-    </script>
 
 </head>
 <body>
@@ -55,7 +46,7 @@
             isCustomer = signin.customerLogIn(username, password);
         } catch (Exception e){
             e.printStackTrace();
-            response.sendRedirect("login.jsp?error=problem");
+            response.sendRedirect("login_error_2.jsp");
         }
 
 
@@ -71,7 +62,7 @@
             session.setAttribute("type", "customer");
             response.sendRedirect("customer.jsp");
         } else {
-            response.sendRedirect("login.jsp?error=invalidCredentials");
+            response.sendRedirect("login_error.jsp");
         }
 
     }

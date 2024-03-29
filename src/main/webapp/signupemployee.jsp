@@ -8,13 +8,6 @@
     <meta charset="UTF-8">
     <title>Login</title>
     <link rel="stylesheet" href="MainStyle.css">
-            <script>
-                var urlParams = new URLSearchParams(window.location.search);
-                var error = urlParams.get('error');
-                if (error === 'problem') {
-                    alert("Error: problem with signing up);
-                }
-            </script>
 </head>
 <body>
 <nav>
@@ -38,22 +31,26 @@
 
     if ("POST".equalsIgnoreCase(request.getMethod())) {
         // Retrieve form parameters
-        String username = request.getParameter("username");
-        String password = request.getParameter("password");
-        int chainid = Integer.parseInt(request.getParameter("chainid"));
-        String address = request.getParameter("address");
-        String role = request.getParameter("role");
-        int ssn = Integer.parseInt(request.getParameter("ssn"));
-
-        UserService signin = new UserService();
         try {
-            boolean worked = signin.signUpEmployee(username, password, ssn, address, chainid, role);
-            session.setAttribute("name", username);
-            session.setAttribute("type", "employee");
-            response.sendRedirect("employee.jsp");
+            String username = request.getParameter("username");
+            String password = request.getParameter("password");
+            int chainid = Integer.parseInt(request.getParameter("chainid"));
+            String address = request.getParameter("address");
+            String role = request.getParameter("role");
+            int ssn = Integer.parseInt(request.getParameter("ssn"));
+
+            UserService signin = new UserService();
+            try {
+                boolean worked = signin.signUpEmployee(username, password, ssn, address, chainid, role);
+                session.setAttribute("name", username);
+                session.setAttribute("type", "employee");
+                response.sendRedirect("employee.jsp");
+            } catch (Exception e){
+                e.printStackTrace();
+                response.sendRedirect("signup_error.jsp");
+            }
         } catch (Exception e){
-            e.printStackTrace();
-            response.sendRedirect("signupemployee.jsp?error=problem");
+            response.sendRedirect("signup_error2.jsp");
         }
     }
 %>
@@ -68,7 +65,7 @@
         <input type="password" id="password" name="password" required>
     </div>
     <div class="form-group">
-        <label for="chainid">ChainID:</label>
+        <label for="chainid">Hotel ID:</label>
         <input type="text" id="chainid" name="chainid" required>
     </div>
     <div class="form-group">

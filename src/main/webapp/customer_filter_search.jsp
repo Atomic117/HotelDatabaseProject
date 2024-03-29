@@ -51,7 +51,7 @@
     ArrayList<Room> rooms = null;
 
     try {
-        rooms = findroom.search(chainId, inDate, outDate, star, room, price, total);
+        rooms = findroom.customerSearch(chainId, inDate, outDate, star, room, price, total);
     } catch (Exception e) {
         e.printStackTrace();
         response.sendRedirect("customer_search.jsp");

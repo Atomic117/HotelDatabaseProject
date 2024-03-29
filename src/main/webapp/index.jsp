@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,29 +18,27 @@
 </nav>
 
 <%
-   session.setAttribute("name", "");
-   session.setAttribute("type", "");
-   session.setAttribute("filter", "no");
+    session.setAttribute("type", "empty");
+    session.setAttribute("name", "empty");
 %>
 
-<h1> Hotel Booking Website</h1>
+<h1>Hotel Booking Website</h1>
 <div class="image-container">
-    <img src="img/hotelimage_0.jpg" alt="Image 1" width ="500" height = "300">
-    <img src="img/hotelimage_1.jpg" alt="Image 2" width ="500" height = "300">
-    <img src="img/hotelimage_2.jpg" alt="Image 3" width ="500" height = "300">
+    <img src="img/hotelimage_0.jpg" alt="Image 1" width="500" height="300">
+    <img src="img/hotelimage_1.jpg" alt="Image 2" width="500" height="300">
+    <img src="img/hotelimage_2.jpg" alt="Image 3" width="500" height="300">
 </div>
 
-    <div class="button-container1">
+<div class="button-container1">
+    <form action="login.jsp">
+        <button type="submit" class="button1">Login</button>
+    </form>
 
-        <form action="login.jsp">
-            <button type="submit" class="button1">Login</button>
-        </form>
+    <form action="customer_search.jsp">
+        <button type="submit" class="button1">Search for Rooms</button>
+    </form>
+</div>
 
-        <form action="customer_search.jsp">
-            <button type="submit" class="button1">Search for Rooms</button>
-        </form>
-    </div>
-
-<p> Welcome to the Hotel Booking Website! If you want to view rooms, click Search for Rooms. If you would like to rent, please Login </p>
+<p>Welcome to the Hotel Booking Website! If you want to view rooms, click Search for Rooms. If you would like to rent, please Login</p>
 </body>
 </html>

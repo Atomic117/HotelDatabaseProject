@@ -6,6 +6,8 @@ import java.sql.Statement;
 import java.util.ArrayList;
 
 public class ViewService {
+
+    //View1
     public ArrayList<View1> displayView1() {
 
         ArrayList<View1> view1 = new ArrayList<View1>();
@@ -27,6 +29,7 @@ public class ViewService {
             throw new RuntimeException(e);
         }
     }
+    //View 2
 
     public ArrayList<View2> displayView2() {
         ArrayList<View2> view2 = new ArrayList<View2>();

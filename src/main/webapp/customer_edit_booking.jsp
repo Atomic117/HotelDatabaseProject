@@ -38,6 +38,7 @@
         response.sendRedirect("login_redirect.jsp");
     }
 
+
     int booksid = Integer.parseInt(request.getParameter("bookingid"));
     BookingService service = new BookingService();
     Room selectedRoom = null;
@@ -62,7 +63,7 @@
 
         } catch (Exception e){
              e.printStackTrace();
-             response.sendRedirect("customer_b_error.jsp");
+             response.sendRedirect("customer_d_error.jsp");
         }
     }
 %>

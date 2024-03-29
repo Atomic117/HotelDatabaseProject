@@ -34,6 +34,15 @@
      } else {
          response.sendRedirect("index.jsp");
      }
+     session.setAttribute("filter", "no");
+     session.setAttribute("room", "1000");
+     session.setAttribute("star", "0");
+     session.setAttribute("chainid", "0");
+     session.setAttribute("price", "0");
+     session.setAttribute("total", "0");
+     session.setAttribute("indate", "0");
+     session.setAttribute("outdate", "0");
+
  %>
 
  <%
@@ -47,7 +56,7 @@
          books = findBookings.getCustomerBookings(customerID);
      } catch (Exception e) {
          e.printStackTrace();
-         response.sendRedirect("customer.jsp");
+         response.sendRedirect("customer_bv.jsp");
      }
  %>
 

@@ -27,7 +27,7 @@ public class Hotel {
     public int getChainID(){
         return chainID;
     }
-    public String getManagerNum(){
+    public String getManagerName(){
         return manager;
     }
     public int getRoomNumber(){

@@ -18,12 +18,6 @@
 
 <h1> You are logged in as: Employee</h1>
 
-<div class='button-container1'>
-    <button onclick="window.location.href='searchforrooms.jsp'" class="button1"> View booking</button>
-    <button onclick="window.location.href='view.jsp'" class="button1"> Rent now </button>
-    <button onclick="window.location.href='logout.jsp'" class="button1">Log out </button>
-</div>
-
 <%
     if (session.getAttribute("type").equals("customer")) {
         response.sendRedirect("customer.jsp");
@@ -35,7 +29,16 @@
     else {
         response.sendRedirect("index.jsp");
     }
+
+
 %>
+
+<div class='button-container1'>
+    <button onclick="window.location.href='employee_view_booking.jsp'" class="button1"> Convert Booking</button>
+    <button onclick="window.location.href='employee_filter.jsp'" class="button1"> Rent Now</button>
+    <button onclick="window.location.href='employee_view_renting.jsp'" class="button1"> Check Out </button>
+    <button onclick="window.location.href='logout.jsp'" class="button1">Log Out </button>
+</div>
 
 </body>
 </html>

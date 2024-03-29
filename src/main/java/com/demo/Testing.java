@@ -6,8 +6,9 @@ import java.util.Date;
 public class Testing {
     public static void main(String[] args) {
 
-        BookingService service = new BookingService();
-        System.out.println(service.getCustomerBookings(3).size());
+        RentingService service = new RentingService();
+        System.out.println(service.getRentingByRentingID(4));
+        System.out.println(service.getRentingByRentingID(4).getBookingID());
 
     }
 }
